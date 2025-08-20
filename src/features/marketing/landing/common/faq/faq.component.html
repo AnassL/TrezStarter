@@ -1,0 +1,132 @@
+<div class="py-[70px] md:py-[90px] lg:py-[110px] xl:py-[150px] 2xl:py-[180px]">
+    <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+        <div class="text-center mb-[30px] md:mb-[40px] lg:mb-[50px] xl:mb-[60px] 2xl:mb-[70px]">
+            <span class="inline-block py-[4.5px] px-[15px] rounded-[100px] bg-orange-100 dark:bg-[#0a0e19] text-orange-700 mb-[12px]">
+                Frequently Asked Questions
+            </span>
+            <h2 class="!text-gray-900 dark:!text-white md:-tracking-[1px] !font-medium !text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl xl:max-w-[550px] mx-auto !leading-[1.2] !mb-[10px] lg:!mb-[12px]">
+                Everything You Need to Know About Trezo
+            </h2>
+            <p class="md:text-[15px] lg:text-md">
+                Here are some of the most common things people ask us.
+            </p>
+        </div>
+        <div class="toc-accordion mx-auto lg:max-w-[850px]" id="tablesOfContentAccordion">
+            <div class="toc-accordion-item bg-white dark:bg-[#0a0e19] border border-orange-100 dark:border-[#202c4b] rounded-[25px] text-gray-700 dark:text-gray-100 relative z-[1] mb-[15px] last:mb-0">
+                <button
+                    type="button"
+                    (click)="toggleSection(0)"
+                    [ngClass]="{ 'open': isSectionOpen(0) }"
+                    class="toc-accordion-button text-[15px] md:text-md lg:text-lg py-[20px] md:py-[28px] px-[20px] md:px-[30px] block w-full ltr:text-left rtl:text-right font-semibold relative"
+                >
+                    Is there a free trial available?
+                    <i class="ri-arrow-down-s-line absolute top-1/2 -translate-y-1/2 ltr:right-[20px] rtl:left-[20px] ltr:md:right-[30px] rtl:md:left-[30px] text-[20px] md:text-[25px]"></i>
+                </button>
+                <div
+                    class="toc-accordion-collapse -mt-[7px] md:-mt-[12px] px-[20px] md:px-[30px] pb-[20px] md:pb-[28px]"
+                    [ngClass]="{ 'open': isSectionOpen(0) }"
+                >
+                    <p class="text-gray-500 dark:text-gray-400">
+                        Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                    </p>
+                </div>
+                <div
+                    class="opacity-50 absolute top-0 left-0 right-0 bottom-0 -z-[1] rounded-[25px] dark:hidden"
+                    style="background: linear-gradient(180deg, #FFEFE1 0%, #FFFFFF 100%);"
+                ></div>
+            </div>
+            <div class="toc-accordion-item bg-white dark:bg-[#0a0e19] border border-orange-100 dark:border-[#202c4b] rounded-[25px] text-gray-700 dark:text-gray-100 relative z-[1] mb-[15px] last:mb-0">
+                <button
+                    type="button"
+                    (click)="toggleSection(1)"
+                    [ngClass]="{ 'open': isSectionOpen(1) }"
+                    class="toc-accordion-button text-[15px] md:text-md lg:text-lg py-[20px] md:py-[28px] px-[20px] md:px-[30px] block w-full ltr:text-left rtl:text-right font-semibold relative"
+                >
+                    Can I upgrade or downgrade my plan anytime?
+                    <i class="ri-arrow-down-s-line absolute top-1/2 -translate-y-1/2 ltr:right-[20px] rtl:left-[20px] ltr:md:right-[30px] rtl:md:left-[30px] text-[20px] md:text-[25px]"></i>
+                </button>
+                <div
+                    class="toc-accordion-collapse -mt-[7px] md:-mt-[12px] px-[20px] md:px-[30px] pb-[20px] md:pb-[28px]"
+                    [ngClass]="{ 'open': isSectionOpen(1) }"
+                >
+                    <p class="text-gray-500 dark:text-gray-400">
+                        Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                    </p>
+                </div>
+                <div
+                    class="opacity-50 absolute top-0 left-0 right-0 bottom-0 -z-[1] rounded-[25px] dark:hidden"
+                    style="background: linear-gradient(180deg, #FFEFE1 0%, #FFFFFF 100%);"
+                ></div>
+            </div>
+            <div class="toc-accordion-item bg-white dark:bg-[#0a0e19] border border-orange-100 dark:border-[#202c4b] rounded-[25px] text-gray-700 dark:text-gray-100 relative z-[1] mb-[15px] last:mb-0">
+                <button
+                    type="button"
+                    (click)="toggleSection(2)"
+                    [ngClass]="{ 'open': isSectionOpen(2) }"
+                    class="toc-accordion-button text-[15px] md:text-md lg:text-lg py-[20px] md:py-[28px] px-[20px] md:px-[30px] block w-full ltr:text-left rtl:text-right font-semibold relative"
+                >
+                    Is Trezo suitable for large teams or enterprises?
+                    <i class="ri-arrow-down-s-line absolute top-1/2 -translate-y-1/2 ltr:right-[20px] rtl:left-[20px] ltr:md:right-[30px] rtl:md:left-[30px] text-[20px] md:text-[25px]"></i>
+                </button>
+                <div
+                    class="toc-accordion-collapse -mt-[7px] md:-mt-[12px] px-[20px] md:px-[30px] pb-[20px] md:pb-[28px]"
+                    [ngClass]="{ 'open': isSectionOpen(2) }"
+                >
+                    <p class="text-gray-500 dark:text-gray-400">
+                        Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                    </p>
+                </div>
+                <div
+                    class="opacity-50 absolute top-0 left-0 right-0 bottom-0 -z-[1] rounded-[25px] dark:hidden"
+                    style="background: linear-gradient(180deg, #FFEFE1 0%, #FFFFFF 100%);"
+                ></div>
+            </div>
+            <div class="toc-accordion-item bg-white dark:bg-[#0a0e19] border border-orange-100 dark:border-[#202c4b] rounded-[25px] text-gray-700 dark:text-gray-100 relative z-[1] mb-[15px] last:mb-0">
+                <button
+                    type="button"
+                    (click)="toggleSection(3)"
+                    [ngClass]="{ 'open': isSectionOpen(3) }"
+                    class="toc-accordion-button text-[15px] md:text-md lg:text-lg py-[20px] md:py-[28px] px-[20px] md:px-[30px] block w-full ltr:text-left rtl:text-right font-semibold relative"
+                >
+                    Do you offer onboarding or training?
+                    <i class="ri-arrow-down-s-line absolute top-1/2 -translate-y-1/2 ltr:right-[20px] rtl:left-[20px] ltr:md:right-[30px] rtl:md:left-[30px] text-[20px] md:text-[25px]"></i>
+                </button>
+                <div
+                    class="toc-accordion-collapse -mt-[7px] md:-mt-[12px] px-[20px] md:px-[30px] pb-[20px] md:pb-[28px]"
+                    [ngClass]="{ 'open': isSectionOpen(3) }"
+                >
+                    <p class="text-gray-500 dark:text-gray-400">
+                        Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                    </p>
+                </div>
+                <div
+                    class="opacity-50 absolute top-0 left-0 right-0 bottom-0 -z-[1] rounded-[25px] dark:hidden"
+                    style="background: linear-gradient(180deg, #FFEFE1 0%, #FFFFFF 100%);"
+                ></div>
+            </div>
+            <div class="toc-accordion-item bg-white dark:bg-[#0a0e19] border border-orange-100 dark:border-[#202c4b] rounded-[25px] text-gray-700 dark:text-gray-100 relative z-[1] mb-[15px] last:mb-0">
+                <button
+                    type="button"
+                    (click)="toggleSection(4)"
+                    [ngClass]="{ 'open': isSectionOpen(4) }"
+                    class="toc-accordion-button text-[15px] md:text-md lg:text-lg py-[20px] md:py-[28px] px-[20px] md:px-[30px] block w-full ltr:text-left rtl:text-right font-semibold relative"
+                >
+                    What channels does Trezo support?
+                    <i class="ri-arrow-down-s-line absolute top-1/2 -translate-y-1/2 ltr:right-[20px] rtl:left-[20px] ltr:md:right-[30px] rtl:md:left-[30px] text-[20px] md:text-[25px]"></i>
+                </button>
+                <div
+                    class="toc-accordion-collapse -mt-[7px] md:-mt-[12px] px-[20px] md:px-[30px] pb-[20px] md:pb-[28px]"
+                    [ngClass]="{ 'open': isSectionOpen(4) }"
+                >
+                    <p class="text-gray-500 dark:text-gray-400">
+                        Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                    </p>
+                </div>
+                <div
+                    class="opacity-50 absolute top-0 left-0 right-0 bottom-0 -z-[1] rounded-[25px] dark:hidden"
+                    style="background: linear-gradient(180deg, #FFEFE1 0%, #FFFFFF 100%);"
+                ></div>
+            </div>
+        </div>
+    </div>
+</div>

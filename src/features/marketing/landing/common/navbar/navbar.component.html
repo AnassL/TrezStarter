@@ -1,0 +1,95 @@
+<div
+    class="marketing-navbar fixed top-0 right-0 left-0 transition-all h-auto z-[5] py-[20px] md:py-[30px]"
+    [ngClass]="{'is-sticky': isSticky}"
+    id="navbar"
+>
+    <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+        <div class="navbar relative bg-white dark:bg-[#0a0e19] rounded-[100px] py-[10px] md:py-[12px] lg:py-[8px] px-[15px] md:px-[20px] lg:px-[15px] transition-all">
+            <div class="flex items-center flex-wrap lg:flex-nowrap justify-between lg:justify-start">
+                <a routerLink="/marketing-demo" class="inline-block w-[125px] ltr:mr-[15px] rtl:ml-[15px]">
+                    <img src="images/marketing/logo.svg" alt="logo" class="inline-block dark:hidden">
+                    <img src="images/marketing/white-logo.svg" alt="logo" class="hidden dark:inline-block">
+                </a>
+                <button
+                    type="button"
+                    id="navbar-burger-menu"
+                    (click)="toggleClass()"
+                    [class.active]="classApplied"
+                    class="inline-block relative leading-none lg:hidden"
+                >
+                    <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white"></span>
+                    <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white"></span>
+                    <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white"></span>
+                </button>
+                <div class="hidden lg:flex items-center grow basis-full basis-auto"><!-- For Big Devices -->
+                    <ul class="flex mx-auto flex-row gap-[30px] xl:gap-[45px]">
+                        <li>
+                            <a routerLink="/marketing-demo" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/marketing-demo/features" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Features
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/marketing-demo/pricing" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Pricing
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/marketing-demo/blog" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="flex items-center gap-[25px] xl:gap-[30px]">
+                        <a href="https://trezo-twcss.envytheme.com/sign-in.html" class="inline-block text-orange-600 transition-all hover:text-orange-700" target="_blank">
+                            Login
+                        </a>
+                        <a href="https://trezo-twcss.envytheme.com/" class="inline-block text-orange-600 py-[10.5px] px-[28px] rounded-[100px] transition-all font-medium border border-orange-600 hover:text-white hover:bg-orange-500 hover:border-orange-500" target="_blank">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-[#0a0e19] rounded-[15px] p-[20px] md:p-[30px] w-full hidden lg:!hidden absolute top-[100%] left-0 right-0"
+                    [class.active]="classApplied"
+                    id="navbar-collapse"
+                ><!-- For Responsive -->
+                    <ul>
+                        <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                            <a routerLink="/marketing-demo" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Home
+                            </a>
+                        </li>
+                        <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                            <a routerLink="/marketing-demo/features" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Features
+                            </a>
+                        </li>
+                        <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                            <a routerLink="/marketing-demo/pricing" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Pricing
+                            </a>
+                        </li>
+                        <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                            <a routerLink="/marketing-demo/blog" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="flex items-center gap-[20px] mt-[15px]">
+                        <a href="https://trezo-twcss.envytheme.com/" class="inline-block text-orange-600 py-[10.5px] px-[28px] rounded-[100px] transition-all font-medium border border-orange-600 hover:text-white hover:bg-orange-500 hover:border-orange-500" target="_blank">
+                            Get Started
+                        </a>
+                        <a href="https://trezo-twcss.envytheme.com/sign-in.html" class="inline-block text-orange-600 transition-all hover:text-orange-700" target="_blank">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
