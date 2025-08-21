@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from '../../app/common/footer/footer.component';
 import { HeaderComponent } from '../../app/common/header/header.component';
-import { SimplifiedSidebarComponent } from '../../app/common/sidebar/simplified-sidebar.component';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { SidebarComponent } from '../../app/common/sidebar/sidebar.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-dashboard',
@@ -12,12 +12,14 @@ import { SidebarComponent } from '../../app/common/sidebar/sidebar.component';
     imports: [
         RouterOutlet, 
         HeaderComponent, 
-        // SidebarComponent, 
-        SimplifiedSidebarComponent, 
+        SidebarComponent, 
         FooterComponent,
-        NgScrollbarModule
+        NgScrollbarModule,
+        FormsModule
     ],
     templateUrl: './dashboard.component.html',
     styleUrl: './dashboard.component.scss'
 })
-export class DashboardComponent {}
+export class DashboardComponent {
+  sidebarMode: 'selected' | 'complete' = 'selected';
+}

@@ -1,12 +1,25 @@
      <!-- Sidebar -->
-      <!-- <app-sidebar /> -->
-     <app-simplified-sidebar />
+      <app-sidebar [useSimplifiedData]="sidebarMode === 'complete'" />
 
      <!-- Main Content -->
 <div class="main-content transition-all flex flex-col overflow-hidden min-h-screen">
 
     <!-- Header -->
     <app-header />
+
+    <!-- Sidebar Mode Selector -->
+    <div class="px-[25px] py-[10px] bg-gray-50 dark:bg-[#15203c] border-b border-gray-200 dark:border-[#172036]">
+      <div class="flex items-center">
+        <label class="text-sm font-medium text-gray-700 dark:text-gray-300 mr-2">Sidebar Mode:</label>
+        <select 
+          [(ngModel)]="sidebarMode" 
+          class="bg-white dark:bg-[#0c1427] border border-gray-300 dark:border-[#172036] rounded-md px-3 py-1 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+        >
+          <option value="selected">Selected</option>
+          <option value="complete">Complete</option>
+        </select>
+      </div>
+    </div>
 
     <!-- Router Outlet -->
     <router-outlet />
