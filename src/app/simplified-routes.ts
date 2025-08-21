@@ -43,6 +43,34 @@ import { LCoursesComponent } from './pages/lms-page/l-courses/l-courses.componen
 
 
 export const simplifiedRoutes: Routes = [
+    {path: '', redirectTo: 'lms-courses-demo', pathMatch: 'full'},
+
+    // Landing page routes from TrezLand
+    {
+        path: 'lms-courses-demo',
+        component: LmsCoursesDemoComponent,
+        children: [
+            {path: '', component: LcdHomeComponent},
+            {path: 'why-choose-us', component: LcdWhyChooseUsComponent},
+            {path: 'courses', component: LcdCoursesComponent},
+            {path: 'course-details', component: LcdCourseDetailsComponent},
+            {path: 'how-it-works', component: LcdHowItWorksComponent},
+            {path: 'pricing', component: LcdPricingComponent},
+            {path: 'checkout', component: LcdCheckoutComponent}
+        ]
+    },
+    {
+        path: 'marketing-demo',
+        component: MarketingDemoComponent,
+        children: [
+            {path: '', component: MdHomeComponent},
+            {path: 'features', component: MdFeaturesComponent},
+            {path: 'pricing', component: MdPricingComponent},
+            {path: 'blog', component: MdBlogComponent},
+            {path: 'blog-details', component: MdBlogDetailsComponent}
+        ]
+    },
+
     // Admin routes
     {
         path: 'dashboard',
@@ -80,31 +108,5 @@ export const simplifiedRoutes: Routes = [
         ]
     },
 
-    // Landing page routes from TrezLand
-    {
-        path: 'lms-courses-demo',
-        component: LmsCoursesDemoComponent,
-        children: [
-            {path: '', component: LcdHomeComponent},
-            {path: 'why-choose-us', component: LcdWhyChooseUsComponent},
-            {path: 'courses', component: LcdCoursesComponent},
-            {path: 'course-details', component: LcdCourseDetailsComponent},
-            {path: 'how-it-works', component: LcdHowItWorksComponent},
-            {path: 'pricing', component: LcdPricingComponent},
-            {path: 'checkout', component: LcdCheckoutComponent}
-        ]
-    },
-    {
-        path: 'marketing-demo',
-        component: MarketingDemoComponent,
-        children: [
-            {path: '', component: MdHomeComponent},
-            {path: 'features', component: MdFeaturesComponent},
-            {path: 'pricing', component: MdPricingComponent},
-            {path: 'blog', component: MdBlogComponent},
-            {path: 'blog-details', component: MdBlogDetailsComponent}
-        ]
-    },
-    {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
     {path: '**', component: NotFoundComponent}
 ];
